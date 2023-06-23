@@ -29,3 +29,9 @@
 		right: 15px;
 	}
 }
+
+@media screen and (width <= 600px) {
+	.search {
+		flex: 1;
+	}
+}

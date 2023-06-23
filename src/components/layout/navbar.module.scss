@@ -6,6 +6,8 @@
 	border-radius: 30px;
 	background: black;
 	padding: 60px 0 60px 50px;
+	transition: width var(--duration) ease-in-out;
+	overflow: hidden;
 
 	.brand {
 		margin-bottom: 40px;
@@ -22,14 +24,19 @@
 		padding: 0;
 
 		.navLink {
+			position: relative;
 			display: flex;
 			align-items: center;
 			gap: 20px;
-			flex: 1;
 			color: white;
 			font-size: 18px;
 			text-decoration: none;
 			padding: 20px 0;
+			transition: all var(--duration) ease-in-out;
+
+			span {
+				transition: width var(--duration) ease-in-out;
+			}
 
 			&.active {
 				font-weight: 700;
@@ -43,6 +50,75 @@
 		.navLink {
 			padding: 10px 0;
 			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (width <= 1200px) {
+	.navbar {
+		width: 60px;
+		padding: 0;
+
+		.brand {
+			color: transparent;
+			margin-bottom: 20px;
+
+			&::after {
+				content: 'B.';
+				display: block;
+				text-align: center;
+				color: white;
+				margin-left: 8px;
+			}
+		}
+
+		.navLinks, .externalLinks {
+			flex: 1;
+
+			.navLink {
+				justify-content: center;
+				align-items: center;
+				gap: 0;
+
+				span {
+					width: 0;
+					opacity: 0;
+				}
+
+				&.active {
+					background: #222;
+				}
+			}
+		}
+
+		.externalLinks {
+			display: none;
+		}
+	}
+}
+
+@media screen and (width <= 600px) {
+	.navbar {
+		width: calc(100% - 5px);
+		height: 60px;
+		flex-direction: row;
+
+		.brand {
+			display: none;
+		}
+
+		.navLinks {
+			flex-direction: row;
+
+			.navLink {
+				flex: 1;
+				border-radius: 999px;
+				overflow: hidden;
+
+				span {
+					display: none;
+				}
+			}
 		}
 	}
 }

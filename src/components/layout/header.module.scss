@@ -27,6 +27,21 @@
 			height: 30px;
 			border-radius: 999px;
 			background-color: black;
+			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (width <= 600px) {
+	.header {
+		justify-content: flex-end;
+
+		.title {
+			display: none;
+		}
+
+		.controls {
+			flex: 1;
 		}
 	}
 }

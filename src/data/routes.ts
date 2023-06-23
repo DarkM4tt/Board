@@ -21,7 +21,7 @@ export const externalLinks: IRoute[] = [
 	{ name: 'Contact Us', path: '/contact-us', View: noop as FC },
 ];
 
-interface IRoute {
+export interface IRoute {
 	name: string;
 	path: string;
 	Icon?: FC<SVGProps<SVGSVGElement>>;

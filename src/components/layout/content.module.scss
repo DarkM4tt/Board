@@ -1,0 +1,19 @@
+.content {
+	flex: 1;
+	padding: 0 60px;
+	transition: all var(--duration) ease-in-out;
+}
+
+@media screen and (width <= 1200px) {
+	.content {
+		flex: 1;
+		padding: 0 30px;
+	}
+}
+
+@media screen and (width <= 600px) {
+	.content {
+		flex: 1;
+		padding: 0 10px;
+	}
+}
