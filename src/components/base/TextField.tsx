@@ -8,7 +8,7 @@ export default function TextField (props: ITextFieldProps) {
 		<div className={styles.textField}>
 			<span className={styles.label}>{label}</span>
 			<div className={styles.input}>
-				<input type={type} placeholder='Enter a value' value={value} onChange={onChange} />
+				<input type={type} value={value} onChange={onChange} />
 			</div>
 		</div>
 	);
