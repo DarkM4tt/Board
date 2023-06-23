@@ -4,25 +4,9 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import IcDashboard from '#assets/icons/dashboard.svg';
-import IcSchedules from '#assets/icons/schedule.svg';
-import IcSettings from '#assets/icons/setting.svg';
-import IcTransactions from '#assets/icons/transaction.svg';
-import IcUsers from '#assets/icons/user.svg';
+import { externalLinks, routes } from '#data/constant';
 
 import styles from './navbar.module.scss';
-
-const routes = [
-	{ name: 'Dashboard', path: '/dashboard', Icon: IcDashboard },
-	{ name: 'Transactions', path: '/transactions', Icon: IcTransactions },
-	{ name: 'Schedules', path: '/schedules', Icon: IcSchedules },
-	{ name: 'Users', path: '/users', Icon: IcUsers },
-	{ name: 'Settings', path: '/settings', Icon: IcSettings },
-];
-const externalLinks = [
-	{ name: 'Help', path: '/help' },
-	{ name: 'Contact Us', path: '/contact-us' },
-];
 
 export default function Navbar (props: INavbarProps) {
 	const { appName } = props;
