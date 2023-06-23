@@ -19,6 +19,10 @@ const routes = [
 	{ name: 'Users', path: '/users', Icon: IcUsers },
 	{ name: 'Settings', path: '/settings', Icon: IcSettings },
 ];
+const externalLinks = [
+	{ name: 'Help', path: '/help' },
+	{ name: 'Contact Us', path: '/contact-us' },
+];
 
 export default function Navbar (props: INavbarProps) {
 	const { appName } = props;
@@ -32,12 +36,22 @@ export default function Navbar (props: INavbarProps) {
 					routes.map((route, i) => {
 						const Icon = route.Icon;
 						return (
-							<li key={`${route.name}-${i}`}>
+							<li className={styles.navLink} key={`${route.name}-${i}`}>
 								<Icon />
-								<Link
-									className={clsx(styles.navLink, route.path === pathname && styles.active)}
-									href={route.path}
-								>
+								<Link className={clsx(route.path === pathname && styles.active)} href={route.path}>
+									{route.name}
+								</Link>
+							</li>
+						);
+					})
+				}
+			</ul>
+			<ul className={styles.externalLinks}>
+				{
+					externalLinks.map((route, i) => {
+						return (
+							<li className={styles.navLink} key={`${route.name}-${i}`}>
+								<Link className={clsx(route.path === pathname && styles.active)} href={route.path}>
 									{route.name}
 								</Link>
 							</li>
