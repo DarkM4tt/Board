@@ -15,34 +15,36 @@ export default function Navbar (props: INavbarProps) {
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.brand}>{appName}.</div>
-			<ul className={styles.navLinks}>
+			<div className={styles.navLinks}>
 				{
 					routes.map((route, i) => {
-						const Icon = route.Icon;
+						const Icon = route?.Icon;
 						return (
-							<li className={styles.navLink} key={`${route.name}-${i}`}>
-								<Icon />
-								<Link className={clsx(route.path === pathname && styles.active)} href={route.path}>
-									{route.name}
-								</Link>
-							</li>
+							<Link
+								key={`${route.name}-${i}`}
+								className={clsx(styles.navLink, route.path === pathname && styles.active)}
+								href={route.path}
+							>
+								{Icon && <Icon />}
+								{route.name}
+							</Link>
 						);
 					})
 				}
-			</ul>
-			<ul className={styles.externalLinks}>
+			</div>
+			<div className={styles.externalLinks}>
 				{
-					externalLinks.map((route, i) => {
-						return (
-							<li className={styles.navLink} key={`${route.name}-${i}`}>
-								<Link className={clsx(route.path === pathname && styles.active)} href={route.path}>
-									{route.name}
-								</Link>
-							</li>
-						);
-					})
+					externalLinks.map((route, i) => (
+						<Link
+							key={`${route.name}-${i}`}
+							className={clsx(styles.navLink, route.path === pathname && styles.active)}
+							href={route.path}
+						>
+							{route.name}
+						</Link>
+					))
 				}
-			</ul>
+			</div>
 		</div>
 	);
 }
