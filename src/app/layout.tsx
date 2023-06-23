@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 
-import { montserrat } from '#utils/fontHelper';
+import clsx from 'clsx';
+
+import { lato, montserrat } from '#utils/fontHelper';
 
 import './globals.scss';
 
@@ -13,7 +15,7 @@ export default function RootLayout (props: IRootProps) {
 	const { children } = props;
 	return (
 		<html lang='en'>
-			<body className={montserrat.variable} suppressHydrationWarning>
+			<body className={clsx(lato.variable, montserrat.variable)} suppressHydrationWarning>
 				{children}
 			</body>
 		</html>
