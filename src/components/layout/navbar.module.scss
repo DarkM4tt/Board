@@ -11,4 +11,20 @@
 		color: white;
 		text-transform: capitalize;
 	}
+
+	.navLinks {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.navLink {
+			color: white;
+			font-size: 18px;
+			text-decoration: none;
+
+			&.active {
+				font-weight: 700;
+			}
+		}
+	}
 }
