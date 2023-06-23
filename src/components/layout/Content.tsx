@@ -2,17 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 
-import { externalLinks, routes } from '#data/constant';
+import { externalLinks, mainRoutes } from '#data/routes';
 
 export default function Content () {
 	const pathname = usePathname();
-	const Component = [...routes, ...externalLinks].find((route) => route.path === pathname)?.View;
+	const Component = [...mainRoutes, ...externalLinks].find((route) => route.path === pathname)?.View;
 
 	if (!Component) return null;
 
-	return (
-		<>
-			<Component />
-		</>
-	);
+	return <Component />;
 }
