@@ -1,5 +1,6 @@
 import SocialButton from '#components/base/SocialButton';
 
+import PasswordLogin from './PasswordLogin';
 import styles from './login.module.scss';
 
 export default function Login () {
@@ -16,9 +17,10 @@ export default function Login () {
 							<SocialButton service='google' />
 							<SocialButton service='apple' />
 						</div>
-						<div className={styles.passwordLogin}>
-							<span>Email address</span>
-						</div>
+						<PasswordLogin />
+						<span className={styles.noAccount}>
+							Don’t have an account? <span className={styles.register}>Register here</span>
+						</span>
 					</div>
 				</div>
 			</div>

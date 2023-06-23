@@ -1,4 +1,5 @@
 'use client';
+
 import { FC, SVGProps } from 'react';
 
 import IcApple from '#assets/icons/apple.svg';
