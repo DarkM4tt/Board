@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import { usePathname, useRouter } from 'next/navigation';
 
 import { externalLinks, mainRoutes } from '#data/routes';
@@ -11,6 +13,12 @@ export default function Content () {
 	const pathname = usePathname();
 	const router = useRouter();
 	const Component = [...mainRoutes, ...externalLinks].find((route) => route.path === pathname)?.View;
+
+	useEffect(() => {
+		if (!Component) {
+			router.replace(mainRoutes[0]?.path);
+		}
+	}, [Component, router]);
 
 	if (!Component) {
 		router.replace(mainRoutes[0]?.path);

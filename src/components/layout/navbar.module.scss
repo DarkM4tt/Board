@@ -6,7 +6,6 @@
 	border-radius: 30px;
 	background: black;
 	padding: 60px 0 60px 50px;
-	transition: width var(--duration) ease-in-out;
 	overflow: hidden;
 
 	.brand {
@@ -32,10 +31,10 @@
 			font-size: 18px;
 			text-decoration: none;
 			padding: 20px 0;
-			transition: all var(--duration) ease-in-out;
+			transition: all var(--duration) ease-out;
 
 			span {
-				transition: width var(--duration) ease-in-out;
+				transition: width var(--duration) ease-out;
 			}
 
 			&.active {
@@ -99,9 +98,11 @@
 
 @media screen and (width <= 600px) {
 	.navbar {
-		width: calc(100% - 5px);
+		width: calc(100% - 20px);
 		height: 60px;
 		flex-direction: row;
+		align-self: center;
+		transition: width var(--duration) ease-out;
 
 		.brand {
 			display: none;

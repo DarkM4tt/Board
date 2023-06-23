@@ -34,7 +34,10 @@
 
 @media screen and (width <= 600px) {
 	.header {
+		height: 92px;
 		justify-content: flex-end;
+		margin-bottom: 0;
+		padding: 0 8px;
 
 		.title {
 			display: none;
@@ -42,6 +45,24 @@
 
 		.controls {
 			flex: 1;
+			height: 100%;
+
+			div {
+				height: 44px;
+				border-radius: 14px;
+
+				input {
+					padding: 0 24px;
+				}
+			}
+
+			.avatar {
+				width: 44px;
+				height: 44px;
+				border-radius: 999px;
+				background-color: black;
+				cursor: pointer;
+			}
 		}
 	}
 }
