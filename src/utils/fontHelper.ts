@@ -1,7 +1,7 @@
 import { Lato, Montserrat, Open_Sans } from 'next/font/google';
 
 export const montserrat = Montserrat({
-	weight: ['200', '300', '400', '500', '700'],
+	weight: ['200', '300', '400', '500', '700', '800'],
 	fallback: ['sans-serif', 'system-ui'],
 	subsets: ['latin'],
 	variable: '--montserrat',

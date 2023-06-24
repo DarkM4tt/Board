@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 
+import Events from '#components/charts/Events';
 import SummaryCards from '#components/layout/SummaryCards';
 
 import styles from './dashboard.module.scss';
@@ -13,7 +14,7 @@ export default function Dashboard () {
 			<Activities />
 			<div className={styles.productAndEvents}>
 				<Products />
-				<Products />
+				<Events />
 			</div>
 		</div>
 	);

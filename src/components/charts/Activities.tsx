@@ -1,10 +1,16 @@
 import { ResponsiveBump } from '@nivo/bump';
 
+import IcArrow from '#assets/icons/arrowDown.svg';
+
 import styles from './activities.module.scss';
 
 export default function Activities () {
 	return (
 		<div className={styles.activities}>
+			<div className={styles.header}>
+				<span className={styles.title}>Activities</span>
+				<span className={styles.expand}>May - June 2021 <IcArrow /></span>
+			</div>
 			<ResponsiveBump
 				data={data}
 				colors={{ scheme: 'spectral' }}

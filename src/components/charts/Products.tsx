@@ -1,17 +1,19 @@
 import { ResponsivePie } from '@nivo/pie';
 
+import IcArrow from '#assets/icons/arrowDown.svg';
+
 import styles from './products.module.scss';
 
 export default function Products () {
 	return (
 		<div className={styles.products}>
+			<div className={styles.header}>
+				<span className={styles.title}>Top products</span>
+				<span className={styles.expand}>May - June 2021 <IcArrow /></span>
+			</div>
 			<ResponsivePie
 				data={data}
-				margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-				innerRadius={0.5}
-				padAngle={0.7}
-				cornerRadius={3}
-				activeOuterRadiusOffset={8}
+				margin={{ top: 30, right: 50, bottom: 30, left: 0 }}
 				borderWidth={1}
 				borderColor={{
 					from: 'color',
@@ -24,7 +26,7 @@ export default function Products () {
 				}}
 				enableArcLinkLabels={false}
 				arcLinkLabelsSkipAngle={10}
-				arcLinkLabelsTextColor='#333333'
+				arcLinkLabelsTextColor='#000000'
 				arcLinkLabelsThickness={2}
 				arcLinkLabelsColor={{ from: 'color' }}
 				arcLabelsSkipAngle={10}
@@ -112,12 +114,12 @@ export default function Products () {
 						anchor: 'right',
 						direction: 'column',
 						justify: false,
-						translateX: -100,
+						translateX: 0,
 						translateY: 0,
 						itemsSpacing: 4,
-						itemWidth: 111,
+						itemWidth: 0,
 						itemHeight: 18,
-						itemTextColor: '#999',
+						itemTextColor: '#000000',
 						itemDirection: 'left-to-right',
 						itemOpacity: 1,
 						symbolSize: 14,

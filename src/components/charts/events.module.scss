@@ -1,12 +1,10 @@
-.products {
+.events {
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-direction: column;
 	border-radius: 20px;
-	padding: 30px 40px;
 	background-color: white;
 	overflow: hidden;
+	padding: 30px 40px;
 
 	.header {
 		display: flex;
