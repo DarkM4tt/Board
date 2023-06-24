@@ -1,13 +1,11 @@
-import dynamic from 'next/dynamic';
-
 import Activities from '#components/charts/Activities';
 import Events from '#components/charts/Events';
+import Products from '#components/charts/Products';
 import SummaryCards from '#components/layout/SummaryCards';
 
 import styles from './dashboard.module.scss';
 
-const Products = dynamic(() => import('#components/charts/Products'), { ssr: false });
-export default function Dashboard () {
+export default async function Dashboard () {
 	return (
 		<div className={styles.dashboard}>
 			<SummaryCards />
