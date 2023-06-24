@@ -1,9 +1,17 @@
+import { redirect } from 'next/navigation';
+import { getServerSession } from 'next-auth/next';
+
+import { authOptions } from '#api/auth/[...nextauth]/route';
 import SocialButton from '#components/base/SocialButton';
 import PasswordLogin from '#components/layout/PasswordLogin';
+import { mainRoutes } from '#data/routes';
 
 import styles from './login.module.scss';
 
-export default function Login () {
+export default async function Login () {
+	const session = await getServerSession(authOptions);
+	console.log(session);
+	if (session) redirect(mainRoutes[0]?.path);
 
 	return (
 		<main className={styles.login}>

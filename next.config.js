@@ -3,6 +3,15 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "lh3.googleusercontent.com",
+				port: "",
+			},
+		],
+	},
 
 	webpack(config) {
 		config.module.rules.push({

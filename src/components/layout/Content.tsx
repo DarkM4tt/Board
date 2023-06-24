@@ -9,7 +9,7 @@ import { externalLinks, mainRoutes } from '#data/routes';
 import Header from './Header';
 import styles from './content.module.scss';
 
-export default async function Content () {
+export default function Content () {
 	const pathname = usePathname();
 	const router = useRouter();
 	const activeRoute = [...mainRoutes, ...externalLinks].find((route) => route.path === pathname);
