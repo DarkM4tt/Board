@@ -30,7 +30,7 @@ export default function Header () {
 				<div className={styles.avatar}>
 					{
 						session?.user?.image
-							? <Image src={session?.user?.image ?? ''} alt='avatar' width={30} height={30} />
+							? <Image src={session?.user?.image ?? ''} alt='avatar' fill />
 							: <Spinner />
 					}
 				</div>

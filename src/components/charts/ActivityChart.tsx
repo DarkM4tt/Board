@@ -5,7 +5,7 @@ export default function ActivityChart (props: IActivityChart) {
 	return (
 		<ResponsiveBump
 			data={data}
-			colors={{ scheme: 'spectral' }}
+			colors={{ scheme: 'set1' }}
 			lineWidth={3}
 			activeLineWidth={6}
 			inactiveLineWidth={3}
