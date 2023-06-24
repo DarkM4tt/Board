@@ -2,6 +2,8 @@
 
 import { FC, SVGProps } from 'react';
 
+import { signIn } from 'next-auth/react';
+
 import IcApple from '#assets/icons/apple.svg';
 import IcGoogle from '#assets/icons/google.svg';
 
@@ -13,7 +15,7 @@ export default function SocialButton (props: ISocialButtonProps) {
 	const Icon: FC<SVGProps<SVGSVGElement>> = service === 'google' ? IcGoogle : IcApple;
 
 	const onClick = () => {
-		console.log(`${label} login`);
+		signIn(service);
 	};
 
 	return (

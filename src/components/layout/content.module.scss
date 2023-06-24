@@ -1,6 +1,8 @@
 .content {
 	height: 100vh;
 	margin-top: -40px;
+	display: flex;
+	flex-direction: column;
 	flex: 1;
 	padding: 40px 60px 60px;
 	transition: padding var(--duration) ease-out;

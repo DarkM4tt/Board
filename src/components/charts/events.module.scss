@@ -37,9 +37,15 @@
 	.eventList {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		gap: 13px;
 		flex: 1;
+
+		.spinner {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
 		.event {
 			flex: 1;

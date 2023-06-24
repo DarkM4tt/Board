@@ -12,18 +12,15 @@ import styles from './content.module.scss';
 export default function Content () {
 	const pathname = usePathname();
 	const router = useRouter();
-	const Component = [...mainRoutes, ...externalLinks].find((route) => route.path === pathname)?.View;
+	const activeRoute = [...mainRoutes, ...externalLinks].find((route) => route.path === pathname);
+	const Component = activeRoute?.View;
 
 	useEffect(() => {
-		if (!Component) {
+		if (!Component)
 			router.replace(mainRoutes[0]?.path);
-		}
 	}, [Component, router]);
 
-	if (!Component) {
-		router.replace(mainRoutes[0]?.path);
-		return null;
-	}
+	if (!Component) return null;
 
 	return (
 		<div className={styles.content}>

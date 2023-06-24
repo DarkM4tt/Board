@@ -8,6 +8,7 @@ import IcSchedules from '#assets/icons/schedule.svg';
 import IcSettings from '#assets/icons/setting.svg';
 import IcTransactions from '#assets/icons/transaction.svg';
 import Dashboard from '#components/page/Dashboard';
+import Logout from '#components/page/Logout';
 
 export const mainRoutes: IRoute[] = [
 	{ name: 'Dashboard', path: '/dashboard', Icon: IcDashboard, View: Dashboard },
@@ -19,6 +20,7 @@ export const mainRoutes: IRoute[] = [
 export const externalLinks: IRoute[] = [
 	{ name: 'Help', path: '/help', View: noop as FC },
 	{ name: 'Contact Us', path: '/contact-us', View: noop as FC },
+	{ name: 'Logout', path: '/logout', View: Logout },
 ];
 
 export interface IRoute {

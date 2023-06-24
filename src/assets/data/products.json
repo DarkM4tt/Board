@@ -1,0 +1,32 @@
+[
+	{
+		"id": "Apple",
+		"label": "apple",
+		"value": 144,
+		"color": "hsl(159, 70%, 50%)"
+	},
+	{
+		"id": "Samsung",
+		"label": "samsung",
+		"value": 345,
+		"color": "hsl(12, 70%, 50%)"
+	},
+	{
+		"id": "Google",
+		"label": "google",
+		"value": 327,
+		"color": "hsl(201, 70%, 50%)"
+	},
+	{
+		"id": "Motorola",
+		"label": "motorola",
+		"value": 382,
+		"color": "hsl(146, 70%, 50%)"
+	},
+	{
+		"id": "Oppo",
+		"label": "oppo",
+		"value": 585,
+		"color": "hsl(149, 70%, 50%)"
+	}
+]

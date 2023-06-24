@@ -20,7 +20,7 @@ export default function Header () {
 
 	return (
 		<header className={styles.header}>
-			<h1 className={styles.title}>{startCase(pathname.substring(1))}</h1>
+			<h1 className={styles.title}>{pathname != '/logout' ? startCase(pathname.substring(1)) : ''}</h1>
 			<div className={styles.controls}>
 				<Search value={search} onChange={onSearchChange} />
 				<IcBell className={styles.notification} />
