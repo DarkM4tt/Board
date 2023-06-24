@@ -1,5 +1,13 @@
 .dashboard {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	background-color: #F5F5F5;
+	gap: 40px;
+
+	.productAndEvents {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
 }
