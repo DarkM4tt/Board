@@ -15,7 +15,7 @@ export default async function Login () {
 
 	return (
 		<main className={styles.login}>
-			<div className={styles.brand}>{process.env.npm_package_name}.</div>
+			<div className={styles.brand}>Board.</div>
 			<div className={styles.loginWrapper}>
 				<div className={styles.loginForm}>
 					<div className={styles.header}>
@@ -27,7 +27,8 @@ export default async function Login () {
 						</div>
 						<PasswordLogin />
 						<span className={styles.noAccount}>
-							Don’t have an account? <span className={styles.register}>Register here</span>
+							Don’t have an account?{' '}
+							<span className={styles.register}>Register here</span>
 						</span>
 					</div>
 				</div>

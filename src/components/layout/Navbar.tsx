@@ -15,7 +15,6 @@ const NavItem = (props: INavItemProps) => {
 
 	return (
 		<Link
-
 			className={clsx(styles.navLink, route.path === pathname && styles.active)}
 			href={route.path}
 		>
@@ -26,32 +25,29 @@ const NavItem = (props: INavItemProps) => {
 };
 export default function Navbar (props: INavbarProps) {
 	const { appName } = props;
+	console.log(appName);
 
 	return (
 		<div className={styles.navbar}>
-			<div className={styles.brand}>{appName}.</div>
+			<div className={styles.brand}>Board.</div>
 			<div className={styles.navLinks}>
-				{
-					mainRoutes.map((route, i) => (
-						<NavItem key={`${route.name}-${i}`} route={route} />
-					))
-				}
+				{mainRoutes.map((route, i) => (
+					<NavItem key={`${route.name}-${i}`} route={route} />
+				))}
 			</div>
 			<div className={styles.externalLinks}>
-				{
-					externalLinks.map((route, i) => (
-						<NavItem key={`${route.name}-${i}`} route={route} />
-					))
-				}
+				{externalLinks.map((route, i) => (
+					<NavItem key={`${route.name}-${i}`} route={route} />
+				))}
 			</div>
 		</div>
 	);
 }
 
 interface INavbarProps {
-	appName?: string;
+  appName?: string;
 }
 
 interface INavItemProps {
-	route: IRoute;
+  route: IRoute;
 }
