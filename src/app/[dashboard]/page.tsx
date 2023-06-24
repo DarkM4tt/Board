@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
 
-import { authOptions } from '#api/auth/[...nextauth]/route';
 import Content from '#components/layout/Content';
 import Navbar from '#components/layout/Navbar';
+import { authOptions } from '#utils/authHelper';
 
 import styles from './page.module.scss';
 

@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth/next';
 
-import { authOptions } from '#api/auth/[...nextauth]/route';
 import SocialButton from '#components/base/SocialButton';
 import PasswordLogin from '#components/layout/PasswordLogin';
 import { mainRoutes } from '#data/routes';
+import { authOptions } from '#utils/authHelper';
 
 import styles from './login.module.scss';
 
